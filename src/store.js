@@ -10,15 +10,23 @@
 */
 
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
 const reducer = (state,action) => {
-  if(action.type === "ADD_TO_CART"){
+  if(action.type === "REPLACE_PRODUCTS"){
+    return {
+      ...state,
+      products:action.products
+    };
+  }
+
+  else if(action.type === "ADD_TO_CART"){
     return {
       ...state,
       cart : state.cart.concat(action.product)
     }
-  };
-  if(action.type === "REMOVE_FROM_CART"){
+  }
+  else if(action.type === "REMOVE_FROM_CART"){
     return {
       ...state,
       cart : state.cart.filter(e => e.id !== action.product.id),
@@ -27,11 +35,6 @@ const reducer = (state,action) => {
   return state;
 }
 
-const products = [
-  { id: 1, name: "Hipster Ultimate", price: 299, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" },
-  { id: 2, name: "On Motion Live", price: 99, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" },
-  { id: 3, name: "Underground Max", price: 149, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" },
-]
 
 const logger = store => next => action => {
   console.log('dispatching', action)
@@ -40,4 +43,4 @@ const logger = store => next => action => {
   return result
 }
 
-export default createStore(reducer,{cart:[],products:products},applyMiddleware(logger));
+export default createStore(reducer,{cart:[],products:[]},applyMiddleware(logger,thunk));

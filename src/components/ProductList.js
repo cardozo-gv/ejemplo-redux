@@ -45,7 +45,7 @@ const mapDispatchToProps = dispatch =>{
     addToCart(product){
       dispatch(addToCart(product))
     }
-  };
+  }
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(ProductList);
