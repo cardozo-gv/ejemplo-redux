@@ -20,8 +20,9 @@ se crea un archivo json que va a ser convertido por el server
 ejecutamos el server en el puerto 3001
 json-server -p3001 products.json
 
-*redux-thunk
- redux-thunk un middleware 
+*redux-thunk <br/>
+ 
+ redux-thunk es un middleware  <br/>
 npm install --save redux-thunk
 
 *axios
