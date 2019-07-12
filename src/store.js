@@ -9,7 +9,7 @@
   El store invoca la funcion reductora siempre que recibe un llamado al metodo dispatch(action)
 */
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 
 const reducer = (state,action) => {
   if(action.type === "ADD_TO_CART"){
