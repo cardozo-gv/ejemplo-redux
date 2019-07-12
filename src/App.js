@@ -4,7 +4,6 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import ProductList from './components/ProductList';
 import ShoppingCart from './components/ShoppingCart';
-import './App.css';
 
 class App extends Component {
   render() {
