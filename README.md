@@ -5,6 +5,8 @@ https://www.youtube.com/watch?v=aaMoVAcP5-w&list=PLxyfMWnjW2kuyePV1Gzn5W_gr3BGIZ
 
 example of a shopping cart developed with react and react-redux
 
+### The site is published at https://cardozo-gv.github.io/ejemplo-redux/
+
 <br/><br/>
 
 
