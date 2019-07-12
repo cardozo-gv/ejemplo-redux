@@ -9,17 +9,22 @@ example of a shopping cart developed with react and react-redux
 
 <br/><br/>
 
+## En esta rama utilizamos:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*json-server:
 
-## Available Scripts
+npm install json-server
 
-In the project directory, you can run:
+se crea un archivo json que va a ser convertido por el server
 
-### `npm start`
+ejecutamos el server en el puerto 3001
+json-server -p3001 products.json
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*redux-thunk
+ redux-thunk un middleware 
+npm install --save redux-thunk
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+*axios
+instalamos axios que nos permite hacer llamados http
+
+npm install --save axios
