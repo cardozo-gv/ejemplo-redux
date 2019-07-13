@@ -12,4 +12,4 @@ example of a shopping cart developed with react and react-redux
 
 ## Combine Reducers
 Combine reducers permite dividir la función reductora en varias funciones haciendola más legible. 
-Cada una de las nuevas funciones retornan una parte del estado.
+Cada una de las nuevas funciones retornan y se encargan solo de una parte del estado.
